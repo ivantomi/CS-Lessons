@@ -1,0 +1,31 @@
+/* External CSS - styles.css */
+
+/* Styling for the body element */
+body {
+  background-color: lightgray;
+}
+
+/* Styling for p elements */
+p {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Styling for div elements */
+div {
+  width: 300px;
+  height: 150px;
+  text-align: center;
+}
+
+/* Styling for anchor (a) elements */
+a {
+  color: green;
+  text-decoration: none; /* Remove underline */
+}
+
+/* Styling for images */
+img {
+  width: 200px;
+  height: 150px;
+}

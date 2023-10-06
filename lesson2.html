@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+  </head>
+  <body>
+    <a href="index.html"> Return to index</a>
+    <!-- basic example of the way flexbox works -->
+    <p>These elements are in a row</p>
+    <div style="display: flex; flex-direction: row">
+      <div style="background-color: red; width: 100px; height: 100px"></div>
+      <div style="background-color: blue; width: 100px; height: 100px"></div>
+      <div style="background-color: green; width: 100px; height: 100px"></div>
+    </div>
+
+    <!-- example of how to center elements using flexbox -->
+    <p>These elements are in a row, but centered</p>
+
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div style="background-color: red; width: 100px; height: 100px"></div>
+      <div style="background-color: blue; width: 100px; height: 100px"></div>
+      <div style="background-color: green; width: 100px; height: 100px"></div>
+    </div>
+
+    <p>These elements are in a row, but aligned to the right</p>
+
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+      "
+    >
+      <div style="background-color: red; width: 100px; height: 100px"></div>
+      <div style="background-color: blue; width: 100px; height: 100px"></div>
+      <div style="background-color: green; width: 100px; height: 100px"></div>
+    </div>
+
+    <p>These elements are in a column.</p>
+
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div style="background-color: red; width: 100px; height: 100px"></div>
+      <div style="background-color: blue; width: 100px; height: 100px"></div>
+      <div style="background-color: green; width: 100px; height: 100px"></div>
+    </div>
+
+    <p>These elements are in a column, but reversed.</p>
+    <div
+      style="
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div style="background-color: red; width: 100px; height: 100px"></div>
+      <div style="background-color: blue; width: 100px; height: 100px"></div>
+      <div style="background-color: green; width: 100px; height: 100px"></div>
+    </div>
+
+    <p>These elements are in a row, but spaced out using space-between</p>
+    <div
+      style="display: flex; flex-direction: row; justify-content: space-between"
+    >
+      <div style="background-color: red; width: 100px; height: 100px"></div>
+      <div style="background-color: blue; width: 100px; height: 100px"></div>
+      <div style="background-color: green; width: 100px; height: 100px"></div>
+    </div>
+
+    <p>These elements are in a row, but spaced out using space-around</p>
+    <div
+      style="display: flex; flex-direction: row; justify-content: space-around"
+    >
+      <div style="background-color: red; width: 100px; height: 100px"></div>
+      <div style="background-color: blue; width: 100px; height: 100px"></div>
+      <div style="background-color: green; width: 100px; height: 100px"></div>
+    </div>
+
+    <p>These elements are in a row, but spaced out using space-evenly</p>
+    <div
+      style="display: flex; flex-direction: row; justify-content: space-evenly"
+    >
+      <div style="background-color: red; width: 100px; height: 100px"></div>
+      <div style="background-color: blue; width: 100px; height: 100px"></div>
+      <div style="background-color: green; width: 100px; height: 100px"></div>
+    </div>
+  </body>
+</html>
