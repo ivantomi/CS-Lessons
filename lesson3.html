@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class selectors (Navbar)</title>
+    <style>
+      p {
+        margin-top: 50px;
+        width: 750px;
+      }
+
+      div {
+        width: 100px;
+      }
+
+      /* .dropdown-content {
+        display: none;
+      } */
+
+      /* .dropdown:hover .dropdown-content {
+        display: block;
+      } */
+    </style>
+  </head>
+  <body>
+    <a href="index.html"> Return to index</a>
+    <!-- explanation of how to create and reference classes in HTML/CSS-->
+    <h1>Class selectors</h1>
+    <p style="margin-top: 10px">
+      Class selectors are used to apply the same styling to multiple elements.
+      They are referenced in CSS using a dot followed by the name of the class.
+      For example, if we want to apply the same styling to all the elements with
+      the class "example", we would use the following CSS:
+    </p>
+    <p style="margin-top: 10px; background-color: aqua">
+      <code>
+        .example { <br />
+        &nbsp;&nbsp;&nbsp;&nbsp; /* CSS styling goes here */ <br />
+        }
+      </code>
+    </p>
+
+    <!-- explanation on how to nest selectors-->
+    <h3>Nesting selectors</h3>
+    <p style="margin-top: 10px">
+      Selectors can be nested inside other selectors. For example, if we want to
+      apply the same styling to all the elements with the class "example" that
+      are inside a div, we would use the following CSS:
+    </p>
+    <p style="margin-top: 10px; background-color: aqua">
+      <code>
+        div .example { <br />
+        &nbsp;&nbsp;&nbsp;&nbsp; /* CSS styling goes here */ <br />
+        }
+      </code>
+    </p>
+
+    <!-- explanation on :hover pseudoclass-->
+    <h3>:hover pseudoclass</h3>
+    <p style="margin-top: 10px">
+      The :hover pseudoclass is used to apply styling to an element when the
+      mouse is over it. For example, if we want to change the background color
+      of all the elements with the class "example" when the mouse is over them,
+      we would use the following CSS:
+    </p>
+    <p style="margin-top: 10px; background-color: aqua">
+      <code>
+        .example:hover { <br />
+        &nbsp;&nbsp;&nbsp;&nbsp; /* CSS styling goes here */ <br />
+        }
+      </code>
+    </p>
+
+    <h1>How to create a navbar</h1>
+    <p>First, create a div with the class "navbar"</p>
+    <!-- empty div with grey bg-color-->
+    <div class="navbar" style="background-color: grey">This is a div</div>
+
+    <p>Then, create a link inside the div</p>
+    <div class="navbar" style="background-color: grey">
+      <a href="https://www.example.com">Home</a>
+    </div>
+
+    <p>Then, create a div with the class "dropdown"</p>
+    <div class="navbar" style="background-color: grey">
+      <a href="https://www.example.com">Home</a>
+      <div class="dropdown">This is a dropdown</div>
+    </div>
+
+    <p>Then, create a button inside the dropdown div</p>
+    <div class="navbar" style="background-color: grey">
+      <a href="https://www.example.com">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown button</button>
+      </div>
+    </div>
+
+    <p>Then, create a div with the class "dropdown-content"</p>
+    <div class="navbar" style="background-color: grey">
+      <a href="https://www.example.com">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown button</button>
+        <div class="dropdown-content">This is a dropdown-content</div>
+      </div>
+    </div>
+
+    <p>Then, create a link inside the dropdown-content div</p>
+    <div class="navbar" style="background-color: grey">
+      <a href="https://www.example.com">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+          <a href="https://www.example.com">Link 1</a>
+          <a href="https://www.example.com">Link 2</a>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      Now, we have to add the on click functionality for the button. At first,
+      we don't want the dropdown content to be visible, so we make its display
+      "none" in internal/external CSS:
+    </p>
+    <div class="navbar" style="background-color: grey">
+      <a href="https://www.example.com">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+          <a href="https://www.example.com">Link 1</a>
+          <a href="https://www.example.com">Link 2</a>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      Perfect, now we just have to make it appear when the button is
+      clicked/hovered:
+    </p>
+    <div class="navbar" style="background-color: grey">
+      <a href="https://www.example.com">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+          <a href="https://www.example.com">Link 1</a>
+          <a href="https://www.example.com">Link 2</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
