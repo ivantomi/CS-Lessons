@@ -1,0 +1,337 @@
+<!-- FILEPATH: /c:/Users/Ivan/Desktop/Split International School/Lectures/CodePage/projectDocumentation.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project Documentation</title>
+    <style>
+      /* Style for the section container */
+      .section-container {
+        display: none;
+      }
+      /* Style for the active section */
+      .active {
+        display: block;
+      }
+      /* Style for the link container */
+      .link-container {
+        display: flex;
+        justify-content: center;
+      }
+      /* Style for the links */
+      .link {
+        margin: 10px;
+        padding: 5px;
+        border: 1px solid black;
+        cursor: pointer;
+      }
+      /* Style for the active link */
+      .active-link {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html">Return to home</a>
+    <div class="link-container">
+      <div class="link active-link" onclick="showSection(1)">1</div>
+      <div class="link" onclick="showSection(2)">2</div>
+      <div class="link" onclick="showSection(3)">3</div>
+      <div class="link" onclick="showSection(4)">4</div>
+      <div class="link" onclick="showSection(5)">5</div>
+      <div class="link" onclick="showSection(6)">6</div>
+      <div class="link" onclick="showSection(7)">7</div>
+      <div class="link" onclick="showSection(8)">8</div>
+      <div class="link" onclick="showSection(9)">9</div>
+      <div class="link" onclick="showSection(10)">10</div>
+    </div>
+    <div class="section-container" id="section1">
+      <h1>Step 1: Define the project</h1>
+      <p>
+        Before getting into specific details, it's crucial to decide what you
+        want to do. Project can be virtually anything, from developing an
+        entirely new product, exploring some topic you find interesing or simply
+        improving upon an already existing product/feature. It's a good idea to
+        try and write a short description of the project's purpose and goals as
+        soon as you come up with the idea, just to make sure it feels right.
+      </p>
+      <h2>Things to do:</h2>
+      <ul>
+        <li>Project Name</li>
+        <li>Project Description</li>
+        <li>
+          Think about other categories in advance (make sure it feels right)
+        </li>
+      </ul>
+      <h2>Example:</h2>
+      <ul>
+        <li><strong>Space Invaders: The Mobile Game</strong></li>
+        <li>
+          This project involves the development of a simple 2D mobile game that
+          allows players control a spaceship to defend against waves of alien
+          invaders.
+        </li>
+      </ul>
+    </div>
+    <div class="section-container" id="section2">
+      <h1>Step 2: Project Objectives (SMART Goals)</h1>
+
+      <h2>Things to do:</h2>
+      <ul>
+        <li>
+          <strong>Specific</strong> - It answers the questions of "what", "why"
+          and "how". Provides a focused target.
+        </li>
+        <li>
+          <strong>Measurable</strong> - They answer questions of "how much" or
+          "how many" and allow you to track progress and determine whether
+          you're on track to achieve your goal.
+        </li>
+        <li>
+          <strong>Achievable (Attainable)</strong> - Considers available
+          resources, skills and constraints. It's important to set a goal that
+          is challenging but still feasible.
+        </li>
+        <li>
+          <strong>Relevant (Realistic)</strong> - Aligns with your broader
+          objectives and means something. Consider that your goal should
+          contribute to your overall intention/mission/vision.
+        </li>
+        <li>
+          <strong>Time-Bound</strong> - Specifies when the goal should be
+          achieved. Deadline helps time management.
+        </li>
+      </ul>
+      <h2>Example:</h2>
+      <ul>
+        <li>
+          <strong>Specific</strong> - Create an engaging space-themed shooter
+          game with interactive gameplay.
+        </li>
+        <li>
+          <strong>Measurable</strong> - Aim for a minimum of 100 unique players
+          within the first three months of release.
+        </li>
+        <li>
+          <strong>Attainable</strong> - Ensure your team has the required game
+          development expertise and access to necessary tools.
+        </li>
+        <li>
+          <strong>Realistic</strong> - The objectives align with the goal of
+          creating an entertaining and marketable mobile game.
+        </li>
+        <li>
+          <strong>Time-Bound</strong> - Complete the game development within six
+          months.
+        </li>
+      </ul>
+    </div>
+    <div class="section-container" id="section3">
+      <h1>Step 3: Project Background</h1>
+      <h2>Things to do:</h2>
+      <p>Identify challenges or issues that your project addresses.</p>
+      <h2>Example:</h2>
+      <p>
+        <strong>Challenges:</strong> There is a demand for entertaining and
+        nostalgic mobile games, and the market lacks a simple yet engaging
+        space-themed shooter game.
+      </p>
+    </div>
+    <div class="section-container" id="section4">
+      <h1>Step 4: Project Scope</h1>
+      <h2>Things to do:</h2>
+      <p>
+        <strong>Included</strong> - List the specific features and components
+        that will be part of the project.
+      </p>
+      <p>
+        <strong>Excluded</strong> - Specify any features that will not be part
+        of the project, even though it might make sense to have them. (For
+        example, you are not interested in a complex UI design, so you will use
+        a simple one instead.)
+      </p>
+
+      <h2>Example:</h2>
+      <strong>Included</strong>
+      <ul>
+        <li>Player spaceship</li>
+        <li>Alien invaders</li>
+        <li>Player controls</li>
+        <li>Score system</li>
+        <li>Game over screen</li>
+      </ul>
+      <strong>Excluded</strong>
+      <ul>
+        <li>Complex UI design</li>
+        <li>Multiplayer</li>
+        <li>Sound effects</li>
+      </ul>
+    </div>
+    <div class="section-container" id="section5">
+      <h1>Step 5: Stakeholders</h1>
+      <h2>Things to do:</h2>
+      <p>
+        Identify the people who are involved in the project (developers,
+        management, end-users...)
+      </p>
+      <h2>Example:</h2>
+      <ul>
+        <p>
+          <strong>Project Manager</strong> - Overseeing the project and creating
+          documentation
+        </p>
+        <p>
+          <strong>Game Developers</strong> - Coding and development of the game
+        </p>
+        <p><strong>Graphic Designers</strong> - Designing the game's visuals</p>
+      </ul>
+    </div>
+
+    <div class="section-container" id="section6">
+      <h1>Step 6: Constraints</h1>
+      <h2>Things to do:</h2>
+      <p>
+        Identify any limitations or restrictions that might affect the project
+        (time, budget, resources, technology...)
+      </p>
+      <h2>Example:</h2>
+      <ul>
+        <p>
+          <strong>Time</strong> - The project must be completed within six
+          months.
+        </p>
+        <p>
+          <strong>Budget</strong> - The project must be completed within a
+          budget of 10,000€.
+        </p>
+        <p>
+          <strong>Resources</strong> - The project must be completed using only
+          the resources available to the team.
+        </p>
+        <p>
+          <strong>Technology</strong> - The project must be completed using only
+          the tools and technologies already purchased by the company.
+        </p>
+      </ul>
+    </div>
+
+    <div class="section-container" id="section7">
+      <h1>Step 7: Use Cases</h1>
+      <h2>Things to do:</h2>
+      <p>
+        Define scenarios that describe how the users will interact with your
+        product/project. It's usually best to take a look at what you described
+        in the project scope.
+      </p>
+      <h2>Example:</h2>
+      <ul>
+        <li>
+          Player starts the game, controls the spaceship and shoots at alien
+          invaders.
+        </li>
+        <li>
+          Player earns points for each alien defeated and can track their high
+          score.
+        </li>
+      </ul>
+    </div>
+
+    <div class="section-container" id="section8">
+      <h1>Step 8: Functional Requirements</h1>
+      <h2>Things to do:</h2>
+      <p>
+        List the essential functional requirements for your game. They desribe
+        what the system should be able to do and the features that it must
+        deliver. They also describe the system behavior when some inputs are
+        provided by the user.
+      </p>
+      <p>
+        (Optional) You can separate them into categories - Must have, Should
+        have, Nice to have.
+      </p>
+      <h2>Example:</h2>
+      <ul>
+        <li>Spaceship controls (up/down/left/right, tilt)</li>
+        <li>Alien invasion waves</li>
+        <li>Score system</li>
+        <li>Game over condition</li>
+      </ul>
+    </div>
+
+    <div class="section-container" id="section9">
+      <h1>Step 9: Non-Functional Requirements</h1>
+      <h2>Things to do:</h2>
+      <p>
+        Specify the non-functional requirements focusing on performance,
+        security, scalability, usability.
+      </p>
+      <p>
+        (Optional) Other possible options: reliability, maintainability,
+        availability, compatibility...
+      </p>
+      <h2>Example:</h2>
+      <ul>
+        <li>
+          <strong>Performance</strong> - The game must run smoothly on popular
+          mobile devices.
+        </li>
+        <li>
+          <strong>Security</strong> - The game must not collect any personal
+          data from the user.
+        </li>
+        <li>
+          <strong>Usability</strong> - The game must be easy to learn and
+          control.
+        </li>
+      </ul>
+    </div>
+
+    <div class="section-container" id="section10">
+      <h1>Step 10: Cost-Benefit Analysis</h1>
+      <h2>Things to do:</h2>
+      <p>
+        Identify the costs and benefits of the project. This will help you
+        determine whether the project is worth pursuing.
+      </p>
+      <p>Note: Costs/benefits don't have to be about money.</p>
+      <h2>Example:</h2>
+      <p><strong>Costs</strong></p>
+      <ul>
+        <li>Development and testing - 2000€</li>
+        <li>Graphic design - 850€</li>
+        <li>Marketing - 500€</li>
+      </ul>
+      <p><strong>Benefits</strong></p>
+      <ul>
+        <li>Experience in game development for the whole team</li>
+        <li>Revenue from sales - 5000€</li>
+      </ul>
+    </div>
+
+    <script>
+      function showSection(sectionNumber) {
+        // Hide all sections
+        var sections = document.getElementsByClassName("section-container");
+        for (var i = 0; i < sections.length; i++) {
+          sections[i].classList.remove("active");
+        }
+        // Show the selected section
+        var selectedSection = document.getElementById(
+          "section" + sectionNumber
+        );
+        selectedSection.classList.add("active");
+        // Update the active link
+        var links = document.getElementsByClassName("link");
+        for (var i = 0; i < links.length; i++) {
+          links[i].classList.remove("active-link");
+        }
+        var selectedLink =
+          document.getElementsByClassName("link")[sectionNumber - 1];
+        selectedLink.classList.add("active-link");
+      }
+      // Show the first section by default
+      showSection(1);
+    </script>
+  </body>
+</html>

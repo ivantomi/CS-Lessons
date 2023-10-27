@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 4 - Creating a web page from scratch</title>
+    <style>
+      /* Style for the section container */
+      .section-container {
+        display: none;
+      }
+      /* Style for the active section */
+      .active {
+        display: block;
+      }
+      /* Style for the link container */
+      .link-container {
+        display: flex;
+        justify-content: center;
+      }
+      /* Style for the links */
+      .link {
+        margin: 10px;
+        padding: 5px;
+        border: 1px solid black;
+        cursor: pointer;
+      }
+      /* Style for the active link */
+      .active-link {
+        background-color: black;
+        color: white;
+      }
+      code {
+        font-size: 18px;
+        margin: 25px;
+        color: blue;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html">Return to home</a>
+    <div class="link-container">
+      <div class="link active-link" onclick="showSection(1)">1</div>
+      <div class="link" onclick="showSection(2)">2</div>
+      <div class="link" onclick="showSection(3)">3</div>
+      <div class="link" onclick="showSection(4)">4</div>
+      <div class="link" onclick="showSection(5)">5</div>
+    </div>
+
+    <div class="section-container" id="section1">
+      <h1>Step 1: Set up your environment</h1>
+      <p>
+        First, you need to set up your environment. This means you need to
+        install the tools you will use to create your website. The tools you
+        need are:
+      </p>
+      <ul>
+        <li>Visual Studio Code</li>
+        <li>A web browser</li>
+      </ul>
+      <p>Once you do that, here's what you do:</p>
+      <ol>
+        <li>Open VS Code</li>
+        <li>Open/Create a folder</li>
+        <li>Create a file called index.html</li>
+        <li>Open the file in your browser</li>
+      </ol>
+    </div>
+    <div class="section-container" id="section2">
+      <h1>Step 2: Basic Elements</h1>
+      <h2>Headings</h2>
+      <p>
+        As in Google Docs, there are multiple headings you can add to HTML,
+        ranging from 1 to 6
+      </p>
+      <p>To add one, type the following code:</p>
+      <p>
+        <code>
+          &lt;h1&gt;Heading 1&lt;/h1&gt; <br />
+          &lt;h2&gt;Heading 2&lt;/h2&gt; <br />
+          &lt;h3&gt;Heading 3&lt;/h3&gt; <br />
+          &lt;h4&gt;Heading 4&lt;/h4&gt; <br />
+          &lt;h5&gt;Heading 5&lt;/h5&gt; <br />
+          &lt;h6&gt;Heading 6&lt;/h6&gt; <br />
+        </code>
+      </p>
+      <h2>Paragraphs</h2>
+      <p>
+        Paragraphs are used to add text to your website. To add one, type the
+        following code:
+      </p>
+      <p>
+        <code> &lt;p&gt;This is a paragraph&lt;/p&gt; </code>
+      </p>
+      <h2>Links</h2>
+      <p>
+        Links are used to link to other pages. To add one, type the following
+        code:
+      </p>
+      <p>
+        <code>
+          &lt;a href="https://www.google.com"&gt;This is a link&lt;/a&gt;
+        </code>
+      </p>
+      <p style="width: 800px">
+        The thing that actually allows you to redirect is the href attribute,
+        while everything that's inside the tags is what's going to be shown on
+        the page itself (not necessarily text, you can nest whatever you want,
+        like images for example). Don't forget to include the whole link (with
+        https), otherwise it won't work.
+      </p>
+      <h2>Images</h2>
+      <p>
+        Img tags are used to add images to your website. To add one, type the
+        following code:
+      </p>
+      <p>
+        <code>
+          &lt;img
+          src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+        </code>
+      </p>
+      <p style="width: 800px">
+        The thing that actually allows you to add an image is the src attribute.
+        Don't forget to include the whole link (with https), otherwise it won't
+        work.
+      </p>
+      <h2>Lists</h2>
+      <p>
+        Lists are used to add lists to your website. To add one, type the
+        following code:
+      </p>
+      <p>
+        <code>
+          &lt;ul&gt; <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt; <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt; <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 3&lt;/li&gt; <br />
+          &lt;/ul&gt;
+        </code>
+      </p>
+      <p>
+        Also, you can automatically create an ordered list by changing it from
+        "ul" (unordered list) to "ol" (ordered list), like so:
+      </p>
+      <p>
+        <code>
+          &lt;ol&gt; <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt; <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt; <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Item 3&lt;/li&gt; <br />
+          &lt;/ol&gt;
+        </code>
+      </p>
+
+      <h2>Divs</h2>
+      <p>
+        Divs are used to group elements together. To add one, type the following
+        code:
+      </p>
+      <p>
+        <code> &lt;div&gt;This is a div&lt;/div&gt; </code>
+      </p>
+      <p>
+        Here's an example of the way you can use divs with paragraphs and
+        images:
+      </p>
+      <p>
+        <code>
+          &lt;div&gt; <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is a paragraph&lt;/p&gt; <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;img
+          src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+          <br />
+          &lt;/div&gt;
+        </code>
+      </p>
+      <p style="width: 800px">
+        Don't forget - The div will automatically take up the whole width of the
+        page.
+      </p>
+    </div>
+    <div class="section-container" id="section3" style="width: 850px">
+      <h1>Step 3: Basic Styling</h1>
+      <h2>Importing CSS</h2>
+      <p>
+        Now that we know how to add elements to our website, we can start
+        styling them. There are multiple ways to style elements, but the most
+        common one is using CSS. CSS stands for Cascading Style Sheets, and it's
+        used to style HTML elements. To add CSS to your website, you need to
+        create a file called "style.css" and link it to your HTML file. To do
+        that, type the following code inside the head tag:
+      </p>
+      <p>
+        <code> &lt;link rel="stylesheet" href="style.css"&gt; </code>
+      </p>
+      <h2>Selectors</h2>
+      <p>
+        Now, let's see how we can style elements. Let's say we want to change
+        the color of all the paragraphs on our website to red. To do that, we
+        need to add the following code to our style.css file:
+      </p>
+      <p>
+        <code>
+          p { <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;color: red; <br />
+          }
+        </code>
+      </p>
+      <p>
+        The "p" in the code above is called a selector. It's used to select the
+        elements you want to style. In this case, we selected all the paragraphs
+        on our website. The code inside the curly brackets is called a
+        declaration. It's used to declare the style of the selected elements. In
+        this case, we declared that the color of all the paragraphs on our
+        website should be red. Now, let's see how we can style a specific
+        element. Let's say we want to change the color of a specific paragraph
+        to blue. To do that, we need to add the following code to our style.css
+        file:
+      </p>
+      <p>
+        <code>
+          #blue-paragraph { <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;color: blue; <br />
+          }
+        </code>
+      </p>
+      <p>
+        In this case, we used an id selector to select the paragraph we want to
+        style. The id selector is used to select a specific element. In this
+        case, we selected the paragraph with the id "blue-paragraph". Now, let's
+        see how we can style multiple elements at once. Let's say we want to
+        change just some of the paragraphs on our website to green. To do that,
+        we need to add the following code to our style.css file:
+      </p>
+      <p>
+        <code>
+          .green-paragraph { <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;color: green; <br />
+          }
+        </code>
+      </p>
+      <p>
+        In this case, we used a class selector to select the paragraphs we want
+        to style. The class selector is used to select multiple elements. In
+        this case, we selected all the paragraphs with the class
+        "green-paragraph".
+      </p>
+      <h2>Common Styling Attributes</h2>
+      <p>Here are some of the common attributes you can change on elements:</p>
+      <ul>
+        <li>color</li>
+        <li>background-color</li>
+        <li>font-size</li>
+        <li>font-family</li>
+        <li>text-align</li>
+        <li>width</li>
+        <li>height</li>
+        <li>border</li>
+        <li>border-radius</li>
+        <li>padding</li>
+        <li>margin</li>
+      </ul>
+    </div>
+
+    <div class="section-container" id="section4" style="width: 850px">
+      <h1>Step 4: Positioning (Flexbox)</h1>
+      <h2>Setting up Flexbox</h2>
+      <p>
+        Let's start by creating a basic div element with multiple squares inside
+        it:
+      </p>
+      <p>
+        <code>
+          &lt;div class="container"&gt; <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="square"&gt;1&lt;/div&gt; <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="square"&gt;2&lt;/div&gt; <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="square"&gt;3&lt;/div&gt; <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="square"&gt;4&lt;/div&gt; <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="square"&gt;5&lt;/div&gt; <br />
+          &lt;/div&gt;
+        </code>
+      </p>
+      <p>
+        In order to be able to position the squares, we need to add the
+        following code to our style.css file:
+      </p>
+      <code>
+        .container { <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;display: flex; <br />
+        }
+      </code>
+      <h2>Changing the direction</h2>
+      <p>
+        Now, let's say we want to position the squares in a row. To do that, we
+        need to add the following code to our style.css file:
+      </p>
+      <code>
+        .container { <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;display: flex; <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;flex-direction: row; <br />
+        }
+      </code>
+      <p>
+        Now, let's say we want to position the squares in a column. To do that,
+        we need to add the following code to our style.css file:
+      </p>
+      <code>
+        .container { <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;display: flex; <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;flex-direction: column; <br />
+        }
+      </code>
+      <h2>Changing the alignment</h2>
+      <p>
+        Now, let's say we want to position the squares in a row, but we want
+        them to be positioned in the center of the container. To do that, we
+        need to add the following code to our style.css file:
+      </p>
+      <code>
+        .container { <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;display: flex; <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;flex-direction: row; <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;justify-content: center; <br />
+        }
+      </code>
+      <p>
+        Justify content is used to distribute the elements alongside the main
+        axis (if it's a row horizontally, if it's a column vertically). If we
+        want to change the positioning of the squares along the cross axis (if
+        it's a row vertically, if it's a column horizontally), we need to add
+        the following code to our style.css file:
+      </p>
+      <code>
+        .container { <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;display: flex; <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;flex-direction: row; <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;align-items: center; <br />
+        }
+      </code>
+      <p>Other options instead of center are:</p>
+      <ul>
+        <li>flex-start</li>
+        <li>flex-end</li>
+        <li>space-between</li>
+        <li>space-around</li>
+      </ul>
+    </div>
+
+    <div class="section-container" id="section5">
+      <h1>Step 5: What now?</h1>
+      <p>
+        Each week, dedicate 10-20 minutes to go over what you've learned so far.
+        There's no better way of learning web development than by doing it
+        yourself.
+      </p>
+      <p>Here are some of the best resources for learning web development:</p>
+      <ul>
+        <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+        <li>
+          <a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ"
+            >freeCodeCamp</a
+          >
+        </li>
+      </ul>
+      Also, please don't forget to use this website as a resource. It has a lot
+      of useful information that could help you getting started. Additionally,
+      feel free to approach me with any questions you might have.
+
+      <h3>ivan@splitinternational.org</h3>
+    </div>
+
+    <script>
+      function showSection(sectionNumber) {
+        // Hide all sections
+        var sections = document.getElementsByClassName("section-container");
+        for (var i = 0; i < sections.length; i++) {
+          sections[i].classList.remove("active");
+        }
+        // Show the selected section
+        var selectedSection = document.getElementById(
+          "section" + sectionNumber
+        );
+        selectedSection.classList.add("active");
+        // Update the active link
+        var links = document.getElementsByClassName("link");
+        for (var i = 0; i < links.length; i++) {
+          links[i].classList.remove("active-link");
+        }
+        var selectedLink =
+          document.getElementsByClassName("link")[sectionNumber - 1];
+        selectedLink.classList.add("active-link");
+      }
+      // Show the first section by default
+      showSection(1);
+    </script>
+  </body>
+</html>
