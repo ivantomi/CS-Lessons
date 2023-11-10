@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Tutorial</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="lesson5.css" />
+    <script>
+      function showSection(sectionNumber) {
+        // Hide all sections
+        var sections = document.getElementsByClassName("section-container");
+        for (var i = 0; i < sections.length; i++) {
+          sections[i].classList.remove("active");
+        }
+        // Show the selected section
+        var selectedSection = document.getElementById(
+          "section" + sectionNumber
+        );
+        selectedSection.classList.add("active");
+        // Update the active link
+        var links = document.getElementsByClassName("link");
+        for (var i = 0; i < links.length; i++) {
+          links[i].classList.remove("active-link");
+        }
+        var selectedLink =
+          document.getElementsByClassName("link")[sectionNumber - 1];
+        selectedLink.classList.add("active-link");
+      }
+      // Show the first section by default
+      showSection(1);
+    </script>
+  </head>
+  <style></style>
+  <body>
+    <a href="index.html">Return to home</a>
+    <div class="link-container">
+      <div class="link active-link" onclick="showSection(1)">1</div>
+      <div class="link" onclick="showSection(2)">2</div>
+      <div class="link" onclick="showSection(3)">3</div>
+      <div class="link" onclick="showSection(4)">4</div>
+      <div class="link" onclick="showSection(5)">5</div>
+    </div>
+    <h1>How-to Guide: Creating a Form</h1>
+
+    <div class="section-container" id="section1">
+      <p>
+        Forms are a great way to collect information from users. Let's go over
+        how to create a form using HTML and CSS.
+      </p>
+
+      <p>First things first, let's go over the elements we'll be using:</p>
+      <ul>
+        <li>
+          <code>&lt;form&gt;</code> - This element is used to create a form.
+          Everything inside of this element will be part of the form.
+        </li>
+        <li>
+          <code>&lt;input&gt;</code> - This element is used to create an input
+          field. There are many different types of input fields, such as text,
+          number, and dropdowns. Also, they're used to create radio buttons
+          (single choice) and checkboxes (multiple choice).
+        </li>
+        <li>
+          <code>&lt;select&gt;</code> - This element is used to create a
+          dropdown menu.
+        </li>
+        <li>
+          <code>&lt;button&gt;</code> - This element is used to create a button.
+        </li>
+        <li>
+          <code>&lt;label&gt;</code> - This element is used to create a label
+          for an input field.
+        </li>
+        <li>
+          <code>&lt;fieldset&gt;</code> - This element is used to group related
+          elements together.
+        </li>
+        <li>
+          <code>&lt;legend&gt;</code> - This element is used to create a title
+          for a fieldset.
+        </li>
+      </ul>
+    </div>
+
+    <div class="section-container" id="section2">
+      <h2>Basic HTML</h2>
+      <p>
+        Let's start by creating a basic form with a text input, number input,
+        dropdown, radio buttons, checkboxes, and a submit button.
+      </p>
+      <p>
+        First, we'll create a form element and give it an id of "form". Inside
+        of the form, we'll create a text input and give it an id of
+        "text-input". We'll also create a number input and give it an id of
+        "number-input". Next, we'll create a dropdown and give it an id of
+        "dropdown". Inside of the dropdown, we'll create three options. We'll
+        also create a fieldset with three radio buttons and a fieldset with
+        three checkboxes. Finally, we'll create a submit button.
+      </p>
+      <p>Here's what our code looks like so far:</p>
+      <pre>
+          <code>
+            &lt;form id="form"&gt;
+              &lt;input type="text" id="text-input" /&gt;
+              &lt;input type="number" id="number-input" /&gt;
+              &lt;select id="dropdown"&gt;
+                &lt;option&gt;Option 1&lt;/option&gt;
+                &lt;option&gt;Option 2&lt;/option&gt;
+                &lt;option&gt;Option 3&lt;/option&gt;
+              &lt;/select&gt;
+              &lt;fieldset&gt;
+                &lt;legend&gt;Radio Buttons:&lt;/legend&gt;
+                &lt;label&gt;Option 1&lt;/label&gt;&lt;input type="radio" /&gt;
+                &lt;label&gt;Option 2&lt;/label&gt;&lt;input type="radio" /&gt;
+                &lt;label&gt;Option 3&lt;/label&gt;&lt;input type="radio" /&gt;
+              &lt;/fieldset&gt;
+              &lt;fieldset&gt;
+                &lt;legend&gt;Checkboxes:&lt;/legend&gt;
+                &lt;label&gt;&lt;input type="checkbox" /&gt; Checkbox 1&lt;/label&gt;
+                &lt;label&gt;&lt;input type="checkbox" /&gt; Checkbox 2&lt;/label&gt;
+                &lt;label&gt;&lt;input type="checkbox" /&gt; Checkbox 3&lt;/label&gt;
+              &lt;/fieldset&gt;
+              &lt;button&gt;Submit&lt;/button&gt;
+            &lt;/form&gt;
+          </code>
+        </pre>
+      <p>Here's what our form looks like so far:</p>
+      <form id="form">
+        <input type="text" id="text-input" /><input
+          type="number"
+          id="number-input"
+        />
+        <select id="dropdown">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+
+        <fieldset>
+          <legend>Radio Buttons:</legend>
+          <label>Option 1</label><input type="radio" /> <label>Option 2</label
+          ><input type="radio" /> <label>Option 3</label><input type="radio" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Checkboxes:</legend>
+          <label><input type="checkbox" /> Checkbox 1</label>
+          <label><input type="checkbox" /> Checkbox 2</label>
+          <label><input type="checkbox" /> Checkbox 3</label>
+        </fieldset>
+        <button>Submit</button>
+      </form>
+
+      <p>What's up with those "types"?</p>
+      <p>
+        The "type" attribute is used to specify what type of input field you
+        want to create. For example, if you want to create a text input, you
+        would use <code>type="text"</code>. If you want to create a number
+        input, you would use <code>type="number"</code>. If you want to create a
+        dropdown, you would use <code>type="dropdown"</code>. If you want to
+        create a radio button, you would use <code>type="radio"</code>. If you
+        want to create a checkbox, you would use <code>type="checkbox"</code>.
+        That way, there's only one component we need - input.
+      </p>
+      <p>
+        Another useful feature we're using is "fieldset". Fieldsets are used to
+        group related elements together. For example, if you have a form with a
+        bunch of checkboxes, you can group them together using a fieldset. This
+        makes it easier for users to understand what the checkboxes are for.
+        Additionally, it allows us to add a title to the group of checkboxes
+        using "legend". It example above, there is a fieldset for the radio and
+        checkbox buttons.
+      </p>
+    </div>
+
+    <div class="section-container" id="section3">
+      <h2>Labels and submitting</h2>
+      <p>Now that we have a basic form, let's add some labels and styling.</p>
+      <p>
+        Labels are used so that the user understands what each input field is.
+        Even though you could do it with regular text, it's better to use labels
+        because it makes it easier for screen readers to read the form. To
+        create a label, you would use the "label" element. For example, if you
+        want to create a label for a text input, you would use
+        <code>&lt;label&gt;Text Input:&lt;/label&gt;</code>. The text inside of
+        the label is what will be displayed to the user.
+      </p>
+      <p>Here's what our code looks like so far:</p>
+      <pre>
+          <code>
+            &lt;form id="form"&gt;
+              &lt;label&gt;Text Input:&lt;/label&gt;
+              &lt;input type="text" id="text-input" /&gt;
+              &lt;label&gt;Number Input:&lt;/label&gt;
+              &lt;input type="number" id="number-input" /&gt;
+              &lt;label&gt;Dropdown:&lt;/label&gt;
+              &lt;select id="dropdown"&gt;
+                &lt;option&gt;Option 1&lt;/option&gt;
+                &lt;option&gt;Option 2&lt;/option&gt;
+                &lt;option&gt;Option 3&lt;/option&gt;
+              &lt;/select&gt;
+              &lt;fieldset&gt;
+                &lt;legend&gt;Radio Buttons:&lt;/legend&gt;
+                &lt;label&gt;Option 1&lt;/label&gt;&lt;input type="radio" /&gt;
+                &lt;label&gt;Option 2&lt;/label&gt;&lt;input type="radio" /&gt;
+                &lt;label&gt;Option 3&lt;/label&gt;&lt;input type="radio" /&gt;
+              &lt;/fieldset&gt;
+              &lt;fieldset&gt;
+                &lt;legend&gt;Checkboxes:&lt;/legend&gt;
+                &lt;label&gt;&lt;input type="checkbox" /&gt; Checkbox 1&lt;/label&gt;
+                &lt;label&gt;&lt;input type="checkbox" /&gt; Checkbox 2&lt;/label&gt;
+                &lt;label&gt;&lt;input type="checkbox" /&gt; Checkbox 3&lt;/label&gt;
+              &lt;/fieldset&gt;
+              &lt;button&gt;Submit&lt;/button&gt;
+            &lt;/form&gt;
+          </code>
+        </pre>
+      <p>Here's what our form looks like so far:</p>
+      <form id="form">
+        <label>Text Input:</label>
+        <input type="text" id="text-input" />
+        <label>Number Input:</label>
+        <input type="number" id="number-input" />
+        <label>Dropdown:</label>
+        <select id="dropdown">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+
+        <fieldset>
+          <legend>Radio Buttons:</legend>
+          <label>Option 1</label><input type="radio" /> <label>Option 2</label
+          ><input type="radio" /> <label>Option 3</label><input type="radio" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Checkboxes:</legend>
+          <label><input type="checkbox" /> Checkbox 1</label>
+          <label><input type="checkbox" /> Checkbox 2</label>
+          <label><input type="checkbox" /> Checkbox 3</label>
+        </fieldset>
+        <button>Submit</button>
+      </form>
+
+      <p>
+        Finally, now that we have our form, let's see how we can use it as it's
+        supposed to be used in the next step.
+      </p>
+    </div>
+
+    <div class="section-container" id="section4">
+      <h2>Required and submitting</h2>
+      <p>
+        Now that we have a form, let's see how we can use it as it's supposed to
+        be used.
+      </p>
+      <p>
+        First, let's add the "required" attribute to each input field. This will
+        make it so that the user has to fill out each input field before they
+        can submit the form. To add the "required" attribute, you would use
+        <code>required</code>. For example, if you want to make a text input
+        required, you would use
+        <code>&lt;input type="text" required /&gt;</code>.
+      </p>
+      <p>
+        Next, let's add a submit button. This will allow the user to submit the
+        form. To create a submit button, you would use
+        <code>&lt;button&gt;Submit&lt;/button&gt;</code>. Notice what happens
+        when you fill in all the required data and click the button "Submit".
+      </p>
+      <p>Here's what our code looks like so far:</p>
+      <pre>
+          <code>
+            &lt;form id="form"&gt;
+              &lt;label&gt;Text Input:&lt;/label&gt;
+              &lt;input type="text" id="text-input" required /&gt;
+              &lt;label&gt;Number Input:&lt;/label&gt;
+              &lt;input type="number" id="number-input" required /&gt;
+              &lt;label&gt;Dropdown:&lt;/label&gt;
+              &lt;select id="dropdown" required&gt;
+                &lt;option&gt;Option 1&lt;/option&gt;
+                &lt;option&gt;Option 2&lt;/option&gt;
+                &lt;option&gt;Option 3&lt;/option&gt;
+              &lt;/select&gt;
+              &lt;fieldset&gt;
+                &lt;legend&gt;Radio Buttons:&lt;/legend&gt;
+                &lt;label&gt;Option 1&lt;/label&gt;&lt;input type="radio" /&gt;
+                &lt;label&gt;Option 2&lt;/label&gt;&lt;input type="radio" /&gt;
+                &lt;label&gt;Option 3&lt;/label&gt;&lt;input type="radio" /&gt;
+              &lt;/fieldset&gt;
+              &lt;fieldset&gt;
+                &lt;legend&gt;Checkboxes:&lt;/legend&gt;
+                &lt;label&gt;&lt;input type="checkbox" /&gt; Checkbox 1&lt;/label&gt;
+                &lt;label&gt;&lt;input type="checkbox" /&gt; Checkbox 2&lt;/label&gt;
+                &lt;label&gt;&lt;input type="checkbox" /&gt; Checkbox 3&lt;/label&gt;
+              &lt;/fieldset&gt;
+              &lt;button&gt;Submit&lt;/button&gt;
+            &lt;/form&gt;
+          </code>
+        </pre>
+      <p>Here's what our form looks like so far:</p>
+      <form id="form">
+        <label>Text Input:</label>
+        <input type="text" id="text-input" required />
+        <label>Number Input:</label>
+        <input type="number" id="number-input" required />
+        <label>Dropdown:</label>
+        <select id="dropdown" required>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+
+        <fieldset>
+          <legend>Radio Buttons:</legend>
+          <label>Option 1</label><input type="radio" /> <label>Option 2</label
+          ><input type="radio" /> <label>Option 3</label><input type="radio" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Checkboxes:</legend>
+          <label><input type="checkbox" /> Checkbox 1</label>
+          <label><input type="checkbox" /> Checkbox 2</label>
+          <label><input type="checkbox" /> Checkbox 3</label>
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <form class="section-container" id="section5">
+      <h1>Final form</h1>
+      <p>
+        That about covers everything you need to create a basic HTML form. All
+        that's left is to style it to your liking, but I'll leave that to you.
+        Happy coding!
+      </p>
+      <!-- Text Input -->
+      <label>Text Input:</label>
+      <input type="text" id="text-input" required />
+
+      <!-- Number Input -->
+      <label>Number Input:</label>
+      <input type="number" id="number-input" required />
+
+      <!-- Dropdown -->
+      <label>Dropdown:</label>
+      <select id="dropdown" required>
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+      </select>
+
+      <!-- Radio Buttons -->
+      <fieldset class="button-container">
+        <legend>Radio Buttons:</legend>
+        <label>Option 1</label><input type="radio" /> <label>Option 2</label
+        ><input type="radio" /> <label>Option 3</label><input type="radio" />
+      </fieldset>
+
+      <!-- Checkboxes -->
+      <fieldset class="button-container">
+        <legend>Checkboxes:</legend>
+        <label><input type="checkbox" /> Checkbox 1</label>
+        <label><input type="checkbox" /> Checkbox 2</label>
+        <label><input type="checkbox" /> Checkbox 3</label>
+      </fieldset>
+
+      <!-- Submit Button -->
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
